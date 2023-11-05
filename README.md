@@ -10,7 +10,5 @@ A lodash like library for python
 
 `python3 main.py`
 
-`poetry run pytest`
-
 #### Tests
 `poetry run pytest`

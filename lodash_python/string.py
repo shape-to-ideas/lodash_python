@@ -1,6 +1,7 @@
-__all__ = ["string_functions"]
-
+import html
 import unicodedata
+
+__all__ = ["string_functions"]
 
 
 def camel_case(string_value: str):
@@ -21,13 +22,21 @@ def deburr(string_value: str):
     return slug.decode('utf-8')
 
 
-def ends_with(string_value: str, char_check: str, offset = 0):
+def ends_with(string_value: str, char_check: str, offset=0):
     string_len = len(string_value)
     if offset <= 1:
         last_char = string_value[string_len - 1]
     else:
         last_char = string_value[string_len - offset]
     return last_char == char_check
+
+
+def escape(special_char: str):
+    return html.escape(special_char)
+
+
+def replace(main_string: str, to_replace: str, replace_with: str):
+    return main_string.replace(to_replace, replace_with)
 
 
 def string_functions():
@@ -46,5 +55,8 @@ def string_functions():
     ends_with_offset_result = ends_with("power", "e", 2)
     print("Ends With Offset Result = ", ends_with_offset_result)
 
+    escape_result = escape("1&2")
+    print("Escape Result = ", escape_result)
 
-string_functions()
+    replace_result = replace("Hi Fred", "Fred", "Barney")
+    print("Replace Result = ", replace_result)
