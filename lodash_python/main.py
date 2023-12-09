@@ -4,6 +4,7 @@ from enum import Enum
 import list
 import number
 import string
+import tuple
 
 __all__ = ["calculations", "ceil", "Method"]
 
@@ -55,3 +56,5 @@ if __name__ == "__main__":  # pragma: no cover
     string.string_functions()
     print('--------****NUMBER****--------')
     number.number_function()
+    print('--------****TUPLES****--------')
+    tuple.tuple_function()

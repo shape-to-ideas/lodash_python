@@ -47,6 +47,21 @@ def drop(list_entries: list, offset: int):
     return list_entries[offset: len(list_entries)]
 
 
+def find(list_entries: list, value: str or int):
+    list_length = len(list_entries)
+
+    value_found = False
+    for index in range(list_length):
+        if value == list_entries[index]:
+            value_found = True
+            return
+
+    if value_found:
+        print('Value Present in List')
+    else:
+        print('Value Not Present in List')
+
+
 def list_functions():
     chunk_result = chunk([1, 2, 3, 4, 5, 6, 7], 3)
     print("Chunk Result = ", chunk_result)
@@ -62,3 +77,6 @@ def list_functions():
 
     drop_result = drop([1, 2, 3, 4], 2)
     print("Drop Result = ", drop_result)
+
+    find_result = find([1,2,3,4], 2)
+    print("Find Result = ", find_result)
