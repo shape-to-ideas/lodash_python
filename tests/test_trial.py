@@ -1,4 +1,4 @@
 def test_py():
-    input = 1
-    output = 1
-    assert input == output
+    input_val = 1
+    output_val = 1
+    assert input_val == output_val
