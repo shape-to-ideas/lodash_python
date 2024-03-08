@@ -1,0 +1,29 @@
+name: Run Test Cases
+run-name: ${{ github.actor }} is running test cases in GitHub Actions 🚀
+on:
+    pull_request:
+        branches: [main, staging, development]
+jobs:
+    run-defined-python-tests:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Install python3
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.11'
+
+            - name: Install poetry
+              run: pipx install poetry
+
+            - name: Install Packages
+              run: poetry install
+
+            - name: Run poetry shell
+              run: poetry shell
+
+            - name: Run tests
+              run: poetry run pytest tests/test_trial.py
