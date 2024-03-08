@@ -22,8 +22,8 @@ jobs:
             - name: Install Packages
               run: poetry install
 
-            - name: Run poetry shell
-              run: poetry shell
+#            - name: Run poetry shell
+#              run: poetry shell
 
             - name: Run tests
               run: poetry run pytest tests/test_trial.py
