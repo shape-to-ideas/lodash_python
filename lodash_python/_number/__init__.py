@@ -6,8 +6,7 @@ def clamp(number: int, lower_limit: int, upper_limit: int):
         return upper_limit
     elif number < lower_limit:
         return lower_limit
-    else:
-        return number
+    return number
 
 
 def number_function():

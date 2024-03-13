@@ -6,7 +6,6 @@ __all__ = ["calculations", "ceil", "Method"]
 from lodash_python import _list, _string, _tuple, _number
 
 
-# Method = Enum('Method', ["add", "subtract", "multiply", "divide"])
 class Method(Enum):
     ADD = "add"
     SUBTRACT = "subtract"
