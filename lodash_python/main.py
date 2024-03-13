@@ -1,12 +1,9 @@
 import math
 from enum import Enum
 
-import list
-import number
-import string
-import tuple
-
 __all__ = ["calculations", "ceil", "Method"]
+
+from lodash_python import _list, _string, _tuple, _number
 
 
 # Method = Enum('Method', ["add", "subtract", "multiply", "divide"])
@@ -51,10 +48,10 @@ if __name__ == "__main__":  # pragma: no cover
     print('--------****MATH****--------')
     math_functions()
     print('--------****LIST****--------')
-    list.list_functions()
+    _list.list_functions()
     print('--------****STRING****--------')
-    string.string_functions()
+    _string.string_functions()
     print('--------****NUMBER****--------')
-    number.number_function()
+    _number.number_function()
     print('--------****TUPLES****--------')
-    tuple.tuple_function()
+    _tuple.tuple_function()

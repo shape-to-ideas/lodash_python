@@ -1,3 +1,6 @@
+__all__ = ["clamp", "number_function"]
+
+
 def clamp(number: int, lower_limit: int, upper_limit: int):
     if number >= upper_limit:
         return upper_limit

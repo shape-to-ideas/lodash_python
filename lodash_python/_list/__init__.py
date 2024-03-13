@@ -55,6 +55,7 @@ def find(list_entries: list, value: str or int):
         if value == list_entries[index]:
             value_found = True
             return
+        # print(index)
 
     if value_found:
         print('Value Present in List')

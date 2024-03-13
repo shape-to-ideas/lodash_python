@@ -38,6 +38,26 @@ def escape(special_char: str):
 def replace(main_string: str, to_replace: str, replace_with: str):
     return main_string.replace(to_replace, replace_with)
 
+def kebab(main_string: str):
+    kebab_separator = "-"
+    trimmed_string = main_string.strip()
+    lower_case_str = trimmed_string.lower()
+    split_by_space = lower_case_str.split(' ')
+
+    if len(split_by_space) < 2:
+        split_by_underscore = lower_case_str.split('_')
+        filtered_values = filter(get_non_empty, split_by_underscore)
+        return kebab_separator.join(filtered_values)
+    else:
+        return kebab_separator.join(split_by_space)
+
+
+def get_non_empty(string_value: str):
+    if string_value == '':
+        return False
+    else:
+        return True
+
 
 def string_functions():
     camel_case_result = camel_case("Foo bAr Poo")
@@ -60,3 +80,6 @@ def string_functions():
 
     replace_result = replace("Hi Fred", "Fred", "Barney")
     print("Replace Result = ", replace_result)
+
+    kebab_result = kebab("__FOO_BAR__")
+    print("Kebab Result = ", kebab_result)

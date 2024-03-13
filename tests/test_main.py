@@ -1,16 +1,18 @@
-import pytest
 import json
-from lodash_python.main import calculations, Method, ceil
+
+import pytest
+
+from lodash_python.main import Method, calculations, ceil
 
 calculation_params = [
-    {"method": Method.add.value, "first": 1, "second": 2, "expected_result": 3},
-    {"method": Method.add.value, "first": 10, "second": 23, "expected_result": 33},
-    {"method": Method.subtract.value, "first": 100, "second": 25, "expected_result": 75},
-    {"method": Method.subtract.value, "first": 10, "second": 25, "expected_result": -15},
-    {"method": Method.multiply.value, "first": 10, "second": 25, "expected_result": 250},
-    {"method": Method.multiply.value, "first": 0, "second": 25, "expected_result": 0},
-    {"method": Method.divide.value, "first": 10, "second": 5, "expected_result": 2},
-    {"method": Method.divide.value, "first": 0, "second": 5, "expected_result": 0},
+    {"method": Method.ADD.value, "first": 1, "second": 2, "expected_result": 3},
+    {"method": Method.ADD.value, "first": 10, "second": 23, "expected_result": 33},
+    {"method": Method.SUBTRACT.value, "first": 100, "second": 25, "expected_result": 75},
+    {"method": Method.SUBTRACT.value, "first": 10, "second": 25, "expected_result": -15},
+    {"method": Method.MULTIPLY.value, "first": 10, "second": 25, "expected_result": 250},
+    {"method": Method.MULTIPLY.value, "first": 0, "second": 25, "expected_result": 0},
+    {"method": Method.DIVIDE.value, "first": 10, "second": 5, "expected_result": 2},
+    {"method": Method.DIVIDE.value, "first": 0, "second": 5, "expected_result": 0},
 ]
 
 
