@@ -23,4 +23,4 @@ jobs:
               run: poetry install
 
             - name: Run tests
-              run: poetry run pytest tests/test_trial.py
+              run: poetry run pytest --cov lodash_python --cov-report xml
