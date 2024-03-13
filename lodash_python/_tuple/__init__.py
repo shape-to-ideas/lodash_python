@@ -2,6 +2,7 @@ import math
 
 __all__ = ["tuple_chunk", "tuple_chunk"]
 
+
 def tuple_chunk(tuple_entries: tuple, size: int):
     tuple_iterations: int = math.ceil(len(tuple_entries) / size)
     final_chunk: tuple = ()
@@ -11,6 +12,7 @@ def tuple_chunk(tuple_entries: tuple, size: int):
         final_chunk = final_chunk + tuple_entries[start_index: start_index + size]
 
     return final_chunk
+
 
 def tuple_function():
     tuple_chunk_result = tuple_chunk((1, 2, 3, 4, 5, 6, 7), 2)
