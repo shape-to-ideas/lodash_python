@@ -1,6 +1,6 @@
 import math
 
-__all__ = ["list_functions"]
+__all__ = ["list_functions", "chunk"]
 
 
 def chunk(list_entries: list, size: int) -> list[list]:

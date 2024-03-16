@@ -3,7 +3,7 @@ from enum import Enum
 
 __all__ = ["calculations", "ceil", "Method"]
 
-from lodash_python import _list, _string, _tuple, _number
+from lodash_python import list, _string, _tuple, _number
 
 
 class Method(Enum):
@@ -47,7 +47,7 @@ if __name__ == "__main__":  # pragma: no cover
     print('--------****MATH****--------')
     math_functions()
     print('--------****LIST****--------')
-    _list.list_functions()
+    list.list_functions()
     print('--------****STRING****--------')
     _string.string_functions()
     print('--------****NUMBER****--------')

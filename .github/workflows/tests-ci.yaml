@@ -24,3 +24,10 @@ jobs:
 
             - name: Run tests
               run: poetry run pytest --cov lodash_python --cov-report xml
+
+            - name: Report results to DeepSource
+              run: |
+                  curl https://deepsource.io/cli | sh
+                  ./bin/deepsource report --analyzer test-coverage --key python --value-file ./path/to/report
+              env:
+                  DEEPSOURCE_DSN: ${{ secrets.DEEPSOURCE_DSN }}
