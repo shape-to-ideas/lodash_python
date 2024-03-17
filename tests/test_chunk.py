@@ -1,4 +1,4 @@
-from lodash_python.list import chunk
+from lodash_python.list_data import chunk
 
 
 def test_chunk():
