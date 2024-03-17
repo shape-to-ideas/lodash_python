@@ -38,6 +38,7 @@ def escape(special_char: str):
 def replace(main_string: str, to_replace: str, replace_with: str):
     return main_string.replace(to_replace, replace_with)
 
+
 def kebab(main_string: str):
     kebab_separator = "-"
     trimmed_string = main_string.strip()
@@ -48,15 +49,13 @@ def kebab(main_string: str):
         split_by_underscore = lower_case_str.split('_')
         filtered_values = filter(get_non_empty, split_by_underscore)
         return kebab_separator.join(filtered_values)
-    else:
-        return kebab_separator.join(split_by_space)
+    return kebab_separator.join(split_by_space)
 
 
 def get_non_empty(string_value: str):
     if string_value == '':
         return False
-    else:
-        return True
+    return True
 
 
 def string_functions():

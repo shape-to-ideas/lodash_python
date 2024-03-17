@@ -1,6 +1,6 @@
 import math
 
-__all__ = ["list_functions"]
+__all__ = ["list_functions", "chunk"]
 
 
 def chunk(list_entries: list, size: int) -> list[list]:
@@ -79,5 +79,4 @@ def list_functions():
     drop_result = drop([1, 2, 3, 4], 2)
     print("Drop Result = ", drop_result)
 
-    find_result = find([1,2,3,4], 2)
-    print("Find Result = ", find_result)
+    find([1, 2, 3, 4], 2)

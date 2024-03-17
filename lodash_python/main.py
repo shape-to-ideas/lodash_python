@@ -3,10 +3,9 @@ from enum import Enum
 
 __all__ = ["calculations", "ceil", "Method"]
 
-from lodash_python import _list, _string, _tuple, _number
+from lodash_python import list_data, string_data, tuple_data, number_data
 
 
-# Method = Enum('Method', ["add", "subtract", "multiply", "divide"])
 class Method(Enum):
     ADD = "add"
     SUBTRACT = "subtract"
@@ -48,10 +47,10 @@ if __name__ == "__main__":  # pragma: no cover
     print('--------****MATH****--------')
     math_functions()
     print('--------****LIST****--------')
-    _list.list_functions()
+    list_data.list_functions()
     print('--------****STRING****--------')
-    _string.string_functions()
+    string_data.string_functions()
     print('--------****NUMBER****--------')
-    _number.number_function()
+    number_data.number_function()
     print('--------****TUPLES****--------')
-    _tuple.tuple_function()
+    tuple_data.tuple_function()

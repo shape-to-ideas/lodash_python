@@ -10,6 +10,8 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event.pull_request.head.sha }}
 
             - name: Install python3
               uses: actions/setup-python@v5
@@ -24,3 +26,10 @@ jobs:
 
             - name: Run tests
               run: poetry run pytest --cov lodash_python --cov-report xml
+
+            - name: Report results to DeepSource
+              run: |
+                  curl https://deepsource.io/cli | sh
+                  ./bin/deepsource report --analyzer test-coverage --key python --value-file ./coverage.xml
+              env:
+                  DEEPSOURCE_DSN: ${{ secrets.DEEPSOURCE_DSN }}

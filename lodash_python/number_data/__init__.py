@@ -4,10 +4,11 @@ __all__ = ["clamp", "number_function"]
 def clamp(number: int, lower_limit: int, upper_limit: int):
     if number >= upper_limit:
         return upper_limit
-    elif number < lower_limit:
+
+    if number < lower_limit:
         return lower_limit
-    else:
-        return number
+
+    return number
 
 
 def number_function():
